@@ -66,7 +66,17 @@ $(function(){
     });
 });
 
-
+//Selected Business IDs.
+  jQuery(".checkboxClass").click(function(){
+        var selectedBusiness = new Array();
+        var n = jQuery(".checkboxClass:checked").length;
+        if (n > 0){
+            jQuery(".checkboxClass:checked").each(function(){
+                selectedBusiness.push($(this).val());
+            });
+        }
+       $("#chboxids").val(selectedBusiness);
+    });
 //Selected Business IDs.
 
 
